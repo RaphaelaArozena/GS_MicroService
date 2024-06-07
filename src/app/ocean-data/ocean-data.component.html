@@ -1,0 +1,29 @@
+<h2>Ocean Data Explorer</h2>
+
+<div class="filters">
+  <input type="text" [(ngModel)]="filters.regiao" placeholder="Região">
+  <input type="text" [(ngModel)]="filters.especie" placeholder="Espécie">
+  </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Região</th>
+      <th>Espécie</th>
+      <th>Status Conservação</th>
+      <th>Temperatura da Água</th>
+      <th>pH</th>
+      <th>Nível de Poluição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of oceanData">
+      <td>{{ data.regiao }}</td>
+      <td>{{ data.especie }}</td>
+      <td>{{ data.statusConservacao }}</td>
+      <td>{{ data.temperaturaAgua }}</td>
+      <td>{{ data.ph }}</td>
+      <td>{{ data.nivelPoluicao }}</td>
+    </tr>
+  </tbody>
+</table>
